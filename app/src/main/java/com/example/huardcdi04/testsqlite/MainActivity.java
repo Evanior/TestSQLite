@@ -26,15 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         String tabStr[] = lectureCurseur(monCurseur,"str",5);
 
-        /*int pos = 0;
-        if(monCurseur.moveToFirst()){
-            do{
-                monText.append(monCurseur.getString(monCurseur.getColumnIndex("str"))+"\n");
-                tabStr[pos] = monCurseur.getString(monCurseur.getColumnIndex("str"));
-                pos++;
-            }while (monCurseur.moveToNext());
-        }*/
-
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,tabStr);
         // Specify the layout to use when the list of choices appears
@@ -47,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * lie la colonne demander d'un curseur
+     * lit la colonne demander d'un curseur
      * @param unCurseur le curseur à lire
      * @param colonne le nom de la colonne à récuperer
      * @param taille du tableau de string (par default 100)
